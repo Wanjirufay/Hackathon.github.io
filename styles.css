@@ -1,0 +1,157 @@
+body {
+  font-family: "Nunito", sans-serif; /* Modern, friendly font */
+  background: linear-gradient(
+    135deg,
+    #6a82fb,
+    #9932cc
+  ); /* Gradient background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.input-section {
+  display: flex;
+  flex-wrap: wrap; /* Responsive input section */
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  background: linear-gradient(to right, #4a90e2, #63b5f6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  background: rgba(240, 240, 240, 0.8);
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border-left: 5px solid transparent; /* Colored border for tasks */
+}
+
+li:nth-child(odd) {
+  border-left-color: #ff6b6b; /* Reddish for odd tasks */
+}
+
+li:nth-child(even) {
+  border-left-color: #4ecdc4; /* Teal for even tasks */
+}
+
+li:hover {
+  background-color: rgba(230, 230, 230, 0.8);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #888;
+}
+
+.completed span {
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+li div {
+  display: flex;
+  gap: 8px;
+}
+
+li div button {
+  padding: 8px 12px;
+  font-size: 14px;
+  box-shadow: none;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+li div button:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+li div button:first-child {
+  background: #3498db; /* Toggle button color */
+}
+
+li div button:first-child:hover {
+  background: #2980b9;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  button {
+    width: 100%;
+  }
+}

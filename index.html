@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--added to make our web app responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <!--loading css for styling the html page -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--a countainer  to style our display -->
+    <div class="container">
+      <!--heading of our app -->
+      <h1>Todo List</h1>
+      <!--a countainer to style the input field -->
+      <div class="input-section">
+        <input type="text" id="taskInput" placeholder="Enter task" />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <!--an un ordered list to display added tasks -->
+      <ul id="taskList"></ul>
+    </div>
+    <!--loading javascript -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
